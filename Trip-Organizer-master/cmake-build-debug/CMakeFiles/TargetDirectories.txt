@@ -1,0 +1,3 @@
+D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/cmake-build-debug/CMakeFiles/Trip_Organizer_master.dir
+D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir
