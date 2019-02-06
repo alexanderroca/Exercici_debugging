@@ -10,7 +10,7 @@
 int main() {
 	int option;
 
-	FILE* f = fopen(PATH, "r");
+	FILE* f = fopen("data/mainDatabase.nymal", "r");
 
 	if (f == NULL) {
 		printFileError(PATH);
@@ -23,7 +23,7 @@ int main() {
 
 
 	printWelcomeLine();
-
+	printf("Menu\n");
 	do {
 		printMenu();
 
