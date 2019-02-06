@@ -28,11 +28,10 @@ int main() {
 
 		do {
 			option = askUserForOption();
-			if (!isCorrect(option)) {
+			if (isCorrect(option)) {
 				printOptionError();
 			}
 		} while (isCorrect(option));
-		printf("HERE\n");
 		execute(option, &l);
 	} while (!isExit(option));
 

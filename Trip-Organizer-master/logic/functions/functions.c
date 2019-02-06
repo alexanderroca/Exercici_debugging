@@ -5,6 +5,7 @@
 #include <memory.h>
 #include <math.h>
 
+//TODO: HERE
 void showAllDestinations(List *l) {
 	int option, i = 0;
 	do {
