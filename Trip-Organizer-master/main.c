@@ -23,18 +23,16 @@ int main() {
 
 
 	printWelcomeLine();
-	printf("Menu\n");
 	do {
 		printMenu();
 
 		do {
 			option = askUserForOption();
-
 			if (!isCorrect(option)) {
 				printOptionError();
 			}
-		} while (!isCorrect(option));
-
+		} while (isCorrect(option));
+		printf("HERE\n");
 		execute(option, &l);
 	} while (!isExit(option));
 
