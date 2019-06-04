@@ -87,7 +87,7 @@ void planTrip(List *l){
 
 
 void readWholeFile(FILE * f, List * l) {
-	int nDestinations, i, j;
+	int nDestinations, i;
 
 	fscanf(f, "%d", &nDestinations);
 
@@ -98,7 +98,7 @@ void readWholeFile(FILE * f, List * l) {
 }
 
 void readNewFile(List * l) {
-    char *folder;;
+    char *folder;
 	char *input = askUserForPath();
 
 	folder = "data/";
@@ -107,12 +107,13 @@ void readNewFile(List * l) {
 	strcpy(path, folder);
 	strcat(path, input);
 
-	printf("%s\n", path);
 	FILE *f = fopen(path, "r");
 
 	if (f != NULL) {
+        destroy(l);
 		*l = create();
 		readWholeFile(f, l);
+		//printf("\n\tPath: %s has been read correctly.\n", path);
 	} else {
 		printFileError(input);
 	}
