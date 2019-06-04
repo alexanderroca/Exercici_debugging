@@ -73,6 +73,7 @@ void planTrip(List *l){
             break;
         case 2:
         	map = mapAltitudeTravel(d);
+        	printf("\n--- Altitude Map ---");
             printAltitudeMap(map, d.n + 2);
 
             for (i = 0; i < d.n; i++) {
