@@ -6,23 +6,33 @@
 
 #IncludeRegexTransform: 
 
-D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/menu/menu.c
-menu.h
+D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/functions/functions.c
+functions.h
+D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/functions/functions.h
+../../model/destination/destination.h
+D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/model/destination/destination.h
+../menu/menu.h
 D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/menu/menu.h
-../utils/utils.h
-D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/utils/utils.h
-stdio.h
--
 stdlib.h
 -
+string.h
+-
+memory.h
+-
+math.h
+-
+
+D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/functions/functions.h
+stdio.h
+-
+../../model/list/list.h
+D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/model/list/list.h
 
 D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/menu/menu.h
 ../../model/destination/destination.h
 D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/model/destination/destination.h
 ../../model/list/list.h
 D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/model/list/list.h
-
-D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/utils/utils.h
 
 D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/model/destination/destination.h
 stdio.h

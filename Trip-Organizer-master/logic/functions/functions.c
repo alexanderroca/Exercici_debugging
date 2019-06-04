@@ -98,16 +98,17 @@ void readWholeFile(FILE * f, List * l) {
 }
 
 void readNewFile(List * l) {
-    char *folder;
-    folder = malloc(sizeof(char) * 100);
-    folder = "data/";
-
+    char *folder;;
 	char *input = askUserForPath();
 
-	strcat(input, folder);
+	folder = "data/";
+	char *path = (char *) malloc(1 + strlen(folder) + strlen(input));
 
-	printf("%s\n", folder);
-	FILE *f = fopen(input, "r");
+	strcpy(path, folder);
+	strcat(path, input);
+
+	printf("%s\n", path);
+	FILE *f = fopen(path, "r");
 
 	if (f != NULL) {
 		*l = create();
