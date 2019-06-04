@@ -13,7 +13,7 @@ int main() {
 
     setbuf(stdout, 0);
 
-	FILE* f = fopen("D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/data/mainDatabase.nymal", "r");
+	FILE* f = fopen("data/mainDatabase.nymal", "r");
 
 	if (f == NULL) {
 		printFileError(PATH);

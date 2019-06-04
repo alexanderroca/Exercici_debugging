@@ -42,7 +42,7 @@ char * readUserString() {
 	int size = 10;
 	char tmp;
 	char *ret = (char *) malloc(sizeof(char) * size);
-
+	int lenght = 0;
 
 	scanf("%c", &tmp);
 	do {
@@ -53,9 +53,12 @@ char * readUserString() {
 			resize(&ret, size);
 		}
 		scanf("%c", &tmp);
+		lenght++;
 	} while (tmp != '\n');
 
 	resize(&ret, i + 1);
+
+	ret[lenght] = '\0';
 
 	return ret;
 }
