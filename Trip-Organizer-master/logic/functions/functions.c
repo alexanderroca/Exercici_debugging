@@ -113,7 +113,7 @@ void readNewFile(List * l) {
         destroy(l);
 		*l = create();
 		readWholeFile(f, l);
-		//printf("\n\tPath: %s has been read correctly.\n", path);
+		printf("\n\tPath: %s has been read correctly.\n", path);
 	} else {
 		printFileError(input);
 	}
