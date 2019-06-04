@@ -2,17 +2,20 @@
 #include "../../model/destination/destination.h"
 #include "../menu/menu.h"
 #include <stdlib.h>
+#include <string.h>
 #include <memory.h>
 #include <math.h>
 
-//TODO: HERE
 void showAllDestinations(List *l) {
 	int option, i = 0;
+
 	do {
 		printSortMenu();
 
 		option = askUserForOption();
-	} while (option < 1 || option > MAX_SORTING);
+		if(option < 1 || option > MAX_SORTING)
+            printOptionError();
+    } while (option < 1 || option > MAX_SORTING);
 
 	option -= 1;
 
@@ -49,7 +52,7 @@ void planTrip(List *l){
         printPlanMenu();
         option = askUserForOption();
 
-		if (destination < 1 || destination > 2) {
+		if (option < 1 || option > 2) {
 			printOptionError();
 		}
     } while (option < 1 || option > 2);
@@ -77,20 +80,20 @@ void planTrip(List *l){
             }
             free(map);
             break;
-    }
+    }   //switch
 
 }
 
 
 void readWholeFile(FILE * f, List * l) {
-	int nDestinations, i;
+	int nDestinations, i, j;
 
 	fscanf(f, "%d", &nDestinations);
 
 	for (i = 0; i < nDestinations; i++) {
 		Destination d = readFromFile(f);
 		insert(l, d);
-	}
+	}	//for
 }
 
 void readNewFile(List * l) {

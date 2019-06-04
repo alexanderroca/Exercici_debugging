@@ -1,6 +1,7 @@
 #include "list.h"
 #include <stdlib.h>
 #include <memory.h>
+#include <mem.h>
 
 
 List create() {
@@ -30,8 +31,7 @@ List create() {
 
 void insert(List * l, Destination d) {
 	int i;
-	int condicio;
-
+	int condicio = 1;
 
 	//Demanem memòria pel nou node i comprovem si n'hem obtingut
 	Node * nou  = (Node *) malloc (sizeof (Node));
@@ -42,20 +42,18 @@ void insert(List * l, Destination d) {
 	//Per cadascun dels camps d'ordenació, ordenarem el node
 	for (i = 0; i < MAX_SORTING; i++) {
 		//En primer lloc, situem el pdi al primer fantasma
-		l->poi[i] = l->first;
+        goStart(l, i);
 
 		do {
-			//Avancem al següent element i mirem si aquest encara l'hem de saltar
-			l->poi[i] = l->poi[i]->next[i];
 
-			if (l->poi[i] = l->last) {
-				break;
-			}
+            if (isEnd(*l, i)) {
+                break;
+            }
 
 			//Les condicions per saltar un element depenen del mode d'ordenació
 			switch (i) {
 				case BY_NAME:
-					condicio = strcmp(d.name, l->poi[i]->dest.name) > 0;
+					condicio = strcmp(d.name, readPoi(*l, i).name) > 0;
 					break;
 				case BY_AVG_PRICE:
 					condicio = getAverageHotelPrice(d) > getAverageHotelPrice(l->poi[i]->dest);
@@ -71,8 +69,11 @@ void insert(List * l, Destination d) {
 					condicio = 0;
 					break;
 			}
+
+            //Avancem al següent element i mirem si aquest encara l'hem de saltar
+            goNext(l, i);
 			//Seguim saltant mentre no arribem al darrer element i es segueixi complint la condició de salt
-		} while (condicio);
+		} while (condicio || isEnd(*l, i));
 
 		//Apuntem els punters del nou node
 		nou->prev[i] = l->poi[i]->prev[i];

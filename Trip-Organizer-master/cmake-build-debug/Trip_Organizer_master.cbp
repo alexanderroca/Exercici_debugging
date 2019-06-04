@@ -24,9 +24,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/."/>
+					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/data"/>
+					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic"/>
 					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/functions"/>
 					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/menu"/>
 					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/utils"/>
+					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/model"/>
 					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/model/destination"/>
 					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/model/list"/>
 					<Add directory="D:/Archivos de programa/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
@@ -50,9 +54,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/."/>
+					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/data"/>
+					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic"/>
 					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/functions"/>
 					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/menu"/>
 					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/logic/utils"/>
+					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/model"/>
 					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/model/destination"/>
 					<Add directory="D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/model/list"/>
 					<Add directory="D:/Archivos de programa/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>

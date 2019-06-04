@@ -4,13 +4,16 @@
 #include "logic/functions/functions.h"
 #include "model/list/list.h"
 #include "model/destination/destination.h"
+#include <errno.h>
 
 #define PATH "data/mainDatabase.nymal"
 
 int main() {
 	int option;
 
-	FILE* f = fopen("data/mainDatabase.nymal", "r");
+    setbuf(stdout, 0);
+
+	FILE* f = fopen("D:/Documentos/Universitat/Projectes_programacioI/ExerciciDebugging/Trip-Organizer-master/data/mainDatabase.nymal", "r");
 
 	if (f == NULL) {
 		printFileError(PATH);
