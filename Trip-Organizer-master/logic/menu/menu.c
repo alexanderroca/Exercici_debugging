@@ -30,7 +30,7 @@ int askUserForOption() {
 }
 
 int isCorrect(int option) {
-	return option < FIRST_OPTION && option > LAST_OPTION;
+	return option < FIRST_OPTION || option > LAST_OPTION;
 }
 
 int isExit(int option) {
@@ -42,7 +42,7 @@ char * readUserString() {
 	int size = 10;
 	char tmp;
 	char *ret = (char *) malloc(sizeof(char) * size);
-
+	int lenght = 0;
 
 	scanf("%c", &tmp);
 	do {
@@ -53,9 +53,12 @@ char * readUserString() {
 			resize(&ret, size);
 		}
 		scanf("%c", &tmp);
+		lenght++;
 	} while (tmp != '\n');
 
 	resize(&ret, i + 1);
+
+	ret[lenght] = '\0';
 
 	return ret;
 }
@@ -83,9 +86,12 @@ void printDestination(Destination d, int pos, int option) {
 	printf("\tName:\t\t%s\n", d.name);
 	printf("\tCountry:\t%s\n", d.country);
 
+	printf("Option: %d\n", option);
 	switch (option) {
 		case BY_TIME:
+
 			printf("\tTime:\t\t%lf\n", getTimeFromBcn(d));
+
 			break;
 		case BY_DISTANCE:
 			printf("\tDistance:\t%lf\n", getDistanceFromBcn(d));

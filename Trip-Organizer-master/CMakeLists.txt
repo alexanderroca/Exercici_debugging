@@ -1,11 +1,15 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.13)
 project(Trip_Organizer_master)
 
 set(CMAKE_CXX_STANDARD 14)
 
+include_directories(.)
+include_directories(data)
+include_directories(logic)
 include_directories(logic/functions)
 include_directories(logic/menu)
 include_directories(logic/utils)
+include_directories(model)
 include_directories(model/destination)
 include_directories(model/list)
 

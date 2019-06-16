@@ -2,16 +2,20 @@
 #include "../../model/destination/destination.h"
 #include "../menu/menu.h"
 #include <stdlib.h>
+#include <string.h>
 #include <memory.h>
 #include <math.h>
 
 void showAllDestinations(List *l) {
 	int option, i = 0;
+
 	do {
 		printSortMenu();
 
 		option = askUserForOption();
-	} while (option < 1 || option > MAX_SORTING);
+		if(option < 1 || option > MAX_SORTING)
+            printOptionError();
+    } while (option < 1 || option > MAX_SORTING);
 
 	option -= 1;
 
@@ -48,7 +52,7 @@ void planTrip(List *l){
         printPlanMenu();
         option = askUserForOption();
 
-		if (destination < 1 || destination > 2) {
+		if (option < 1 || option > 2) {
 			printOptionError();
 		}
     } while (option < 1 || option > 2);
@@ -69,6 +73,7 @@ void planTrip(List *l){
             break;
         case 2:
         	map = mapAltitudeTravel(d);
+        	printf("\n--- Altitude Map ---");
             printAltitudeMap(map, d.n + 2);
 
             for (i = 0; i < d.n; i++) {
@@ -76,7 +81,7 @@ void planTrip(List *l){
             }
             free(map);
             break;
-    }
+    }   //switch
 
 }
 
@@ -89,17 +94,27 @@ void readWholeFile(FILE * f, List * l) {
 	for (i = 0; i < nDestinations; i++) {
 		Destination d = readFromFile(f);
 		insert(l, d);
-	}
+	}	//for
 }
 
 void readNewFile(List * l) {
+    char *folder;
 	char *input = askUserForPath();
 
-	FILE *f = fopen(input, "r");
+	folder = "data/";
+	char *path = (char *) malloc(1 + strlen(folder) + strlen(input));
+
+	strcpy(path, folder);
+	strcat(path, input);
+
+	FILE *f = fopen(path, "r");
 
 	if (f != NULL) {
+        destroy(l);
 		*l = create();
 		readWholeFile(f, l);
+		printf("\n\tPath: %s has been read correctly.\n", path);
+		fclose(f);
 	} else {
 		printFileError(input);
 	}
