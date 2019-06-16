@@ -114,6 +114,7 @@ void readNewFile(List * l) {
 		*l = create();
 		readWholeFile(f, l);
 		printf("\n\tPath: %s has been read correctly.\n", path);
+		fclose(f);
 	} else {
 		printFileError(input);
 	}
